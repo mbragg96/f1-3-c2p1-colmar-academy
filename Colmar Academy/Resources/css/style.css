@@ -1,0 +1,551 @@
+/* universal styles */
+
+@font-face {
+  font-family: Cabin;
+  src: url("https://fonts.googleapis.com/css?family=Cabin:400,500,600,700");
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Cabin", "Helvetica", sans-serif;
+  line-height: 1.2;
+}
+
+.mobile {
+  display: none;
+}
+
+div {
+  display: block;
+}
+
+
+/* header */
+
+header{
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #4C4C4C;
+  color: #fff;
+}
+
+.logo {
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.logo img {
+  height: 2rem;
+  fill: white;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(254deg) brightness(101%) contrast(103%);
+}
+
+.logo-text span {
+  font-weight: 700;
+  color: #2CCDD8;
+}
+
+.menu {
+  margin-right: 1.5rem;
+  display: block;
+  text-align: right;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  padding-right: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.menu a:hover {
+  color: #2CCDD8;
+  transition: all 0.3s;
+}
+
+header .mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  header .logo, header .menu {
+    display: none;
+  }
+
+  header .mobile-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  header .mobile-menu img {
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  header .mobile-menu img:hover {
+    filter: invert(90%) sepia(11%) saturate(7264%) hue-rotate(142deg) brightness(88%) contrast(91%);
+    transition: all 0.1s;
+  }
+}
+
+/* banner */
+
+.banner {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  background-color: silver;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.banner img {
+  max-width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.banner-text {
+  display: block;
+  margin-right: 1rem;
+}
+
+.banner-text h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.banner-text h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  background-color: #2CCDD8;
+  font-size: 1.25rem;
+  color: white;
+  padding: 0.5rem 3rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #4C4C4C;
+  color: #2CCDD8;
+  transition: all 0.3s;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+.banner {
+  flex-direction: column;
+}
+
+.banner img {
+  max-width: 100%;
+  margin: 0;
+}
+
+.banner-text {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+
+.btn {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+}
+
+/* info */
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+}
+
+.container .left-column {
+  margin: 2rem 1.5rem;
+  width: 60%;
+}
+
+.container .left-column .text {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container .left-column img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container .left-column h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.container .left-column p {
+  color: #5A5A5A;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.container .left-column span {
+  font-size: 1rem;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.container .right-column {
+  padding-top: 1rem;
+  width: 40%;
+}
+
+.container .right-column .info-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.right-column .info-container:hover {
+  background-color: #DFDFDF;
+  transition: all 0.3s;
+}
+
+.info-container img {
+  max-width: 35%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+
+.info-container .info {
+  max-width: 65%;
+  line-height: 1.3;
+}
+
+.info-container .info h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.info-container .info h3 {
+  font-size: 1rem;
+}
+
+.info-container .info a {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+}
+
+.info-container .info a:hover {
+  color: #2CCDD8;
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+  .container .left-column {
+    display: none;
+  }
+
+  .container .right-column {
+    padding-top: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .container .right-column .info-container {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .info-container .mobile{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .info-container img {
+    margin: 0;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .info {
+    padding: 1rem;
+  }
+}
+
+
+/* start learning */
+
+.start-learning {
+  padding: 2rem 0;
+  background-color: silver;
+  line-height: normal;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.start-learning .container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.start-learning h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.start-learning .classes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 3rem;
+}
+
+.class {
+  max-width: 30%;
+  background-color: white;
+  margin: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.class:hover {
+  background-color: #2CCDD8;
+  transition: all 0.3s;
+}
+
+.class a:hover {
+  transition: all 0.3s;
+}
+
+.class:hover img {
+  opacity: 0.4;
+}
+
+.class:hover .text {
+  opacity: 0.5;
+}
+
+.class img {
+  max-width: 100%;
+  height: auto;
+}
+
+.class .text {
+  padding: 1rem;
+}
+
+.class h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.class h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #5A5A5A;
+  margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .start-learning {
+    background-color: #fff;
+    border-top: 2px solid silver;
+  }
+
+  .start-learning .classes {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .class {
+    max-width: 100%;
+    background-color: #DFDFDF;
+    margin: 0.5rem;
+  }
+
+  .class h1 {
+    margin: 0;
+  }
+
+  .class img, .class .text h3 {
+    display: none;
+  }
+
+}
+
+/* thesis exhibit */
+
+.thesis-exhibit {
+  padding: 2rem 0;
+  max-width: 1500px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.thesis-exhibit h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.thesis-exhibit p {
+  font-size: 1.25rem;
+  color: #5A5A5A;
+}
+
+.thesis-exhibit .content {
+  display: flex;
+}
+
+.content video {
+  max-width: 100%;
+  height: auto;
+}
+
+.content .left-column {
+  max-width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.content .left-column h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.thesis-exhibit .right-column {
+  padding-top: 1rem;
+}
+
+.right-column .thesis img {
+  max-width: 35%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.right-column .thesis {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.right-column .thesis .text h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.right-column .thesis .text h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem
+}
+
+.thesis .text a {
+  font-size: 1rem;
+}
+
+.thesis .text a:hover {
+  color: #2CCDD8;
+  transition: all 0.3s;
+}
+
+.thesis:hover {
+  background-color: #DFDFDF;
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+  .thesis-exhibit {
+    border-top: 2px solid silver;
+  }
+
+  .thesis-exhibit .left-column {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .thesis-exhibit .left-column h1, .thesis-exhibit .left-column p {
+    display: none;
+  }
+
+  .thesis-exhibit .right-column {
+    display: none;
+  }
+}
+
+/* footer */
+
+footer {
+  height: 3.125rem;
+  width: 100%;
+  background-color: #4C4C4C;
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  margin: 1rem 1.5rem;
+}
+
+footer .menu {
+  margin: 1rem 1.5rem;
+}
+
+footer span {
+  margin-right: 0.75rem;
+}
+
+footer span:hover {
+  color: #2CCDD8;
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+  footer span {
+    display: none;
+  }
+}
